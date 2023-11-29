@@ -1,58 +1,54 @@
 import React, { useState } from "react";
 import './Calculator.css';
 import Btn from "./Btn";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 function Calculator() {
-const styleBtn = {
-    
-};
+    // Toggle Mode
+    const [mode, setMode] = useState(false);
 
-const boxStyle = {
-
-};
-
-const modeStyle = {
-
-};
-
-    
-    const [mode, setmode] = useState("dark");
-    const [modeText, setmodeText] = useState("Light Mode");
-
-
-    const modeChangeHandler = () => {
-       if (mode == "dark") {
-        setmode("light");
-        setmodeText("Dark Mode");
-       }else{
-        setmode("dark");
-        setmodeText("Light Mode")
-       }
+    const mainDivStyle = {
+        background: "red"
     };
 
-    
-    if (mode === "dark") {
-        styleBtn.background = "black";
-        boxStyle.background = "#2d354f";
-        modeStyle.background = "white";
-        
+    const modeBtn = {
+        background: "#fff",
+        color: "#000"
+    };
+
+    const boxStyle = {
+        background: "rgb(50, 58, 56)",
+    };
+
+    const modeHandler = () => {
+        setMode((prev)=> !prev);
     }
-    else{
-        styleBtn.background = "#d0c6c6";
-        boxStyle.background = "#154041";
-        modeStyle.background = "black";
-        modeStyle.color = "white";
+  
+// After Dark OR Ligth Mode Styled
+    if(mode === true){
+        mainDivStyle.background = "#e8dae7"
+        modeBtn.background = "#000"
+        modeBtn.color = "#fff"
+        boxStyle.background = "rgb(50, 58, 56)"
+    }else{
+        mainDivStyle.background = "rgb(23, 27, 31)"
+        modeBtn.background = "#fff"
+        modeBtn.color = "#000"
+        boxStyle.background = "#2d354f"
     }
-   
-    
 
     return (
         <div>
-            <div className="main" style={ styleBtn }>
+            <div className="main" style={mainDivStyle}>
                 <div>
-                <button type="button" className="btn mode" onClick={ modeChangeHandler } style={ modeStyle } >{ modeText }</button>
+                <button type="button" style={modeBtn} onClick={modeHandler} className=" mode ">{
+                    mode ? <FontAwesomeIcon icon={faMoon} />
+                    : <FontAwesomeIcon icon={faSun} /> }
+                    </button>
                 </div>
-               <Btn bgchanger={boxStyle}/>
+               <Btn boxStyle={boxStyle}/>
             </div>
         </div>
     )

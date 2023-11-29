@@ -1,13 +1,74 @@
-.mini{
+.mini {
     text-align: center;
 }
 
-.box{
-    
+.box {
+    width: 28rem;
+    height: 28rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 2rem;
+    border-radius: 0.5rem;
     transition: all 0.1s ease;
+    text-align: center;
 }
 
-.special{
+
+#inputBox {
+    width: 23rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin: 0.2rem auto;
+    padding: 0rem 1rem;
+    background-color: brown;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#inputBox::placeholder {
+    color: #fff;
+}
+
+
+
+.btnDiv {
+    margin-top: 1rem;
+}
+
+#btn {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 0.3rem;
+    background: transparent;
+    color: #d3c5c5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: none;
+    outline: none;
+
+}
+
+
+
+.zero {
+    width: 8rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    background: transparent;
+    color: #d3c5c5;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.special {
     width: 4rem;
     height: 4rem;
     font-size: 1.5rem;
@@ -18,5 +79,104 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border: none;
     outline: none;
-    
+
+}
+
+@media (max-width: 500px) {
+    .box {
+        width: 20rem;
+        height: 23rem;
+    }
+
+    #inputBox {
+        width: 16rem;
+        height: 3rem;
+    }
+
+    #btn {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-bottom: 0.7rem;
+        font-size: 1rem;
+    }
+
+    .zero {
+        width: 5rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .special {
+        width: 2.6rem;
+        height: 2.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .box {
+        width: 15rem;
+        height: 18rem;
+    }
+
+    #inputBox {
+        width: 11rem;
+        height: 2.5rem;
+        font-size: 2rem;
+    }
+
+    #btn {
+        width: 1.6rem;
+        height: 1.5rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .zero {
+        width: 3.4rem;
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .special {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 270px) {
+    .box {
+        width: 13rem;
+        height: 15rem;
+    }
+
+    #inputBox {
+        width: 11rem;
+        height: 2.2rem;
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    #btn {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.5rem;
+
+    }
+
+    .zero {
+        width: 2.5rem;
+        height: 1.5rem;
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
+    }
+
+    .special {
+        width: 1.2rem;
+        height: 1.2rem;
+        font-size: 0.5rem;
+    }
 }
